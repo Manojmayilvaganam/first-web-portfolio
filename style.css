@@ -268,6 +268,8 @@ form textarea {
 .goop {
   flex: 1;
   min-width: 280px;
+  margin-top: 80px;
+  margin-left: 100px;
 }
 
 .foop {
@@ -324,4 +326,5 @@ form textarea {
     text-align: left;
   }
 }
+
 
