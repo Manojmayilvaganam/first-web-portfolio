@@ -132,127 +132,195 @@ body{
 }
 /* education */
 
-.rule{
-    display: flex;
-    justify-content: flex-start;
-    margin: 0px;
+#Education {
+  padding: 20px;
 }
 
-.rule1{
-    display: flex;
-    justify-content:flex-start;
-    margin: 0px;
+#Education h1 {
+  font-size: 28px;
+  text-decoration: underline;
+  margin-bottom: 20px;
 }
 
-.rule2{
-    display: flex;
-    justify-content: flex-start;
-    margin: 0px;
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap; /* ensures wrapping on smaller screens */
+}
+
+.edu-text {
+  flex: 1;
+  min-width: 250px;
+  font-size: 18px;
+}
+
+.edu-text h3 {
+  margin: 5px 0;
+}
+
+.edu-img img {
+  width: 150px;
+  height: 150px;
+  border: 3px solid black;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ✅ Mobile responsive */
+@media (max-width: 768px) {
+  .edu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .edu-img img {
+    margin-top: 10px;
+  }
 }
 
 /* certificates */
-.oom{
-    p{
-
-        text-decoration: underline;
-       
-       margin-left: 850px;
-    }
-    p,h1{
-    display: inline-block;
-    }
+/* Title */
+.oom h1 {
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.cer{
+/* Certificates grid */
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Certificate card */
+.cer {
   cursor: zoom-in;
-    text-align: center;
-    font-size: 20px;
-    border: 3px;
-    border-style:ridge;
-    border-color: black;
-    display: inline-block;
-    margin-left: 100px;
-    transition: 1s;
-  
-   
-    
+  text-align: center;
+  font-size: 20px;
+  border: 3px ridge black;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background: white;
+  width: 220px;
 }
-.cer:hover{
-        background-color: rgb(41, 38, 38);
-        color: rgb(130, 218, 127);
-    }
-.cer:active{
 
-    transform:scale(3);
+.cer img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
+
+/* Hover effect */
+.cer:hover {
+  background-color: rgb(41, 38, 38);
+  color: rgb(130, 218, 127);
+  transform: scale(1.05);
+}
+
+/* Active (zoom on click) */
+.cer:active {
+  transform: scale(1.2);
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .cert-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cer {
+    width: 80%;
+  }
+}
+
      /* contact */
-nav{
-    display: inline-block;
-    background-color: bisque;
-   
+#alee {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allow stacking on mobile */
+  gap: 30px;
+  padding: 20px;
 }
-.news{
-    font-size:large;
+
+.news {
+  font-size: large;
 }
-form{
-    input{
-        height: 30px;
-        border: 2px;
-        border-color: black;
-        width: 250px;
-        border-style: solid;
-    }
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  font-size: large;
 }
-#alee{
-    display: flex;
+
+.goop {
+  flex: 1;
+  min-width: 280px;
 }
-.goop{
-   margin-left:200px;
-   margin-top: 50px;
+
+.foop {
+  text-align: center;
 }
-.foop{
-    display: inline;
-    margin-left: 170px;
-    button:hover{
-    background-color: white;
-    cursor: pointer;
-    }
+
+.foop button {
+  height: 45px;
+  background-color: rgb(54, 54, 54);
+  font-size: large;
+  color: white;
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s;
 }
-.hub{
-    display: flex;
-    cursor: pointer;
+
+.foop button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
-.hub1:hover {
-    background-color: none;
-    color: white;
-    margin-top: 5px;
-   
+
+.hub {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
 }
-.hub2:hover {
-    background-color:  none;
-    color: #ffffff;
-    margin-top: 5px;
-    
+
+.hub i {
+  font-size: 30px;
+  color: black;
+  transition: 0.3s;
 }
-.hub3:hover {
-    background-color:  none;
-    color: white;
-    margin-top: 5px;
-    
+
+.hub i:hover {
+  color: #de5358; /* highlight hover */
 }
-.hub4:hover {
-    background-color:  none;
-    color: white;
-    margin-top: 5px;
-    
-}
-.hub5:hover {
-    background-color:  none;
-    color: white;
-    margin-top: 5px;
-    
-}
-.foot{
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  #alee {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .goop {
+    margin-top: 20px;
     width: 100%;
-    color: black;
+  }
+
+  .foop {
+    text-align: left;
+  }
 }
