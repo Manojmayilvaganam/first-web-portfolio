@@ -268,7 +268,7 @@ form textarea {
 .goop {
   flex: 1;
   min-width: 280px;
-  margin-top: 80px;
+  margin-top: 10px;
   margin-left: 100px;
 }
 
@@ -326,5 +326,6 @@ form textarea {
     text-align: left;
   }
 }
+
 
 
